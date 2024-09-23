@@ -1,0 +1,205 @@
+---
+title: "Pindograma Pollster Rating Calculator"
+author: "Daniel T. Ferreira"
+
+output: html_document
+---
+
+<!--
+This file is (c) 2024 CincoNoveSeis Jornalismo Ltda.
+It is licensed under the GNU General Public License, version 3.
+-->
+
+First, we import some libraries:
+
+```{r}
+library(tidyverse)
+library(fastDummies)
+
+source('merge_polls_and_election_results.R')
+```
+
+
+Let's start by defining some helpers:
+
+```{r}
+pop.var <- function(x) var(x) * (length(x)-1) / length(x)
+pop.sd <- function(x) sqrt(pop.var(x))
+
+rpm_mean = function(cur_cnpj, cur_mm3, mm3, cnpj) {
+  cur_mm3 - mean(mm3[cnpj != cur_cnpj])
+}
+```
+
+Now, let's import some useful data:
+
+```{r}
+reg_conre = read_csv('data/reg_conre_2024.csv') %>%
+  mutate(cnpj = str_replace_all(cnpj, '[\\.\\/\\-]', ''))
+
+reg_conre1 = read_csv('data/reg_regiao_conre1.csv')
+
+reg_abep = read_csv('data/reg_abep.csv')
+
+company_names = read_csv('data/nomes_empresas.csv')
+company_corr = read_csv('data/empresas_multiplos_cnpjs.csv')
+```
+
+```{r}
+pref_votes_2020_1t = read_csv('data/resultados/resultados_1t_2020.csv', locale = locale(decimal_mark = ',')) %>%
+  rename(SIGLA_UE = codigo_tse, NUMERO_CANDIDATO = numero, QTDE_VOTOS = votos_validos) %>%
+  mutate(ANO_ELEICAO = 2020, CODIGO_CARGO = 11, NUM_TURNO = 1) %>%
+  select(ANO_ELEICAO, SIGLA_UE, CODIGO_CARGO, NUMERO_CANDIDATO, NUM_TURNO, QTDE_VOTOS)
+
+pref_votes_2020_2t = read_csv('data/resultados/resultados_2t_2020.csv', locale = locale(decimal_mark = ',')) %>%
+  rename(SIGLA_UE = codigo_tse, NUMERO_CANDIDATO = numero, QTDE_VOTOS = votos_validos) %>%
+  mutate(ANO_ELEICAO = 2020, CODIGO_CARGO = 11, NUM_TURNO = 2) %>%
+  select(ANO_ELEICAO, SIGLA_UE, CODIGO_CARGO, NUMERO_CANDIDATO, NUM_TURNO, QTDE_VOTOS)
+
+votes_2020 = bind_rows(pref_votes_2020_1t, pref_votes_2020_2t) %>%
+  filter(NUMERO_CANDIDATO != 95 & NUMERO_CANDIDATO != 96) %>%
+  group_by(ANO_ELEICAO, NUM_TURNO, SIGLA_UE, CODIGO_CARGO) %>%
+  mutate(qtde_all_valid = sum(QTDE_VOTOS)) %>%
+  arrange(desc(QTDE_VOTOS), .by_group = T) %>%
+  ungroup()
+
+votes_2022 = read_csv('data/resultados/resultados_2022.csv') %>%
+  rename(SIGLA_UE = SG_UF, NUMERO_CANDIDATO = NR_CANDIDATO, QTDE_VOTOS = QT_VOTOS, CODIGO_CARGO = CD_CARGO, NUM_TURNO = NR_TURNO) %>%
+  mutate(ANO_ELEICAO = 2022) %>%
+  select(ANO_ELEICAO, SIGLA_UE, CODIGO_CARGO, NUMERO_CANDIDATO, NUM_TURNO, QTDE_VOTOS) %>%
+  group_by(ANO_ELEICAO, NUM_TURNO, SIGLA_UE, CODIGO_CARGO) %>%
+  mutate(qtde_all_valid = sum(QTDE_VOTOS)) %>%
+  arrange(desc(QTDE_VOTOS), .by_group = T) %>%
+  ungroup()
+```
+
+```{r}
+polls_pre_2018 = read_csv('data/polls/late_polls_2012_2014_2016_2018.csv')
+
+polls_2020 = read_csv('data/polls/late_polls_2020.csv') %>%
+  merge_polls_and_election_results(votes_2020)
+
+polls_2022 = read_csv('data/polls/late_polls_2022.csv') %>%
+  rename(QT_ENTREVISTADOS = QT_ENTREVISTADO) %>%
+  merge_polls_and_election_results(votes_2022)
+
+late_polls = bind_rows(polls_pre_2018, polls_2020, polls_2022) %>%
+  select(-company_id) %>%
+  left_join(company_corr, 'NR_CNPJ_EMPRESA') %>%
+  mutate(company_id = ifelse(is.na(company_id), NR_CNPJ_EMPRESA, company_id)) %>%
+  select(-pretty_name) %>%
+  left_join(company_names, 'company_id')
+```
+
+```{r}
+model_polls = late_polls %>%
+  filter(pct != 0) %>%
+  mutate(p_pct = pct/100, p_valid_result = valid_result/100) %>%
+  group_by(year, turno,
+           NR_IDENTIFICACAO_PESQUISA, NR_CNPJ_EMPRESA, company_id, pretty_name,
+           SG_UE, polled_UE, CD_CARGO, estimulada, vv, scenario_id,
+           DT_FIM_PESQUISA, is_phone, is_fluxo, QT_ENTREVISTADOS,
+           first_round_date, second_round_date, is_complete, state,
+          # self_hired,non_partisan,source
+          ) %>%
+  arrange(desc(valid_result), .by_group = T) %>%
+  summarize(mm3 = mean(abs(valid_result - pct)),
+            stdev = pop.sd(valid_result - pct),
+            arzev_bw = weighted.mean(abs(log((p_pct / (1 - p_pct)) * ((1 - p_valid_result) / p_valid_result))), valid_result),
+            undecided = first(undecided)) %>%
+  ungroup() %>%
+  mutate(election_type = case_when(
+    polled_UE == 'BR' ~ 1,
+    CD_CARGO == 1 & polled_UE != 'BR' ~ 2,
+    CD_CARGO == 3 & nchar(polled_UE) == 2 ~ 3,
+    CD_CARGO == 11 ~ 4,
+    T ~ NA_real_
+  )) %>%
+  filter(!is.na(election_type)) %>%
+  mutate(days_apart = as.numeric(
+    abs(difftime(DT_FIM_PESQUISA, if_else(turno == 1, first_round_date, second_round_date), units = 'days'))
+  )) %>%
+  mutate(one_week_prior = days_apart <= 7) %>%
+  filter((turno == 1 & days_apart <= 21) | (turno == 2 & days_apart <= 14)) %>%
+  group_by(year, turno, NR_IDENTIFICACAO_PESQUISA, NR_CNPJ_EMPRESA, SG_UE, polled_UE, CD_CARGO, estimulada, vv) %>%
+  filter(n_distinct(scenario_id) == 1) %>%
+  ungroup() %>%
+  filter(is_complete) %>%
+  dummy_cols(select_columns = c('election_type')) %>%
+  dummy_cols(select_columns = c('year')) %>%
+  mutate(first_round = turno == 1) %>%
+  mutate(n_adj = 1 / sqrt(pmin(QT_ENTREVISTADOS, 2000))) %>%
+  dummy_cols(select_columns = c('state'))
+
+fit = lm(mm3 ~ undecided + days_apart + n_adj + election_type_3 + election_type_2 +
+           state_AC + state_AL + state_BA + state_CE + state_ES + state_DF + state_AP +
+           state_GO + state_MA + state_MG + state_MS + state_MT + state_PA + state_PB +
+           state_PE + state_PI + state_PR + state_RJ + state_RN + state_RO + state_RR +
+           state_RS + state_SC + state_SE + state_SP + state_TO + first_round,
+         data = model_polls)
+
+model_polls_2 = model_polls %>%
+  mutate(simple_plus_minus = mm3 - predict(fit, newdata = .)) %>%
+  group_by(year, turno, CD_CARGO, polled_UE, one_week_prior) %>%
+  mutate(n_empresas_cmp = n_distinct(company_id) - 1) %>%
+  mutate(relative_plus_minus = ifelse(
+    n_empresas_cmp != 0,
+    map2_dbl(company_id, mm3, rpm_mean, mm3, company_id),
+    0
+  )) %>%
+  ungroup() %>%
+  mutate(weighted_pm = ifelse(
+    relative_plus_minus == 0,
+    simple_plus_minus,
+    ((n_empresas_cmp * relative_plus_minus) + (3 * simple_plus_minus)) / (n_empresas_cmp + 3)
+  )) %>%
+  filter(!is.na(weighted_pm)) # NOTE: This is due to the late Macapá 2020 election
+
+CURRENT_RATING_YEAR = 2022
+simple_rating_0 = model_polls_2 %>%
+  mutate(year_weight = 0.93 ** (CURRENT_RATING_YEAR - year)) %>%
+  mutate(joinid = row_number()) %>%
+  left_join(reg_conre, by = c('company_id' = 'cnpj')) %>%
+  distinct(joinid, .keep_all = T) %>%
+  mutate(has_conre = !is.na(conre)) %>%
+  left_join(reg_abep, by = c('company_id' = 'cnpj')) %>%
+  mutate(has_abep = !is.na(abep)) %>%
+  left_join(reg_conre1, by = c('company_id' = 'cnpj')) %>%
+  mutate(is_in_conre1 = !is.na(data_conre1)) %>%
+  select(-joinid, -conre, -abep, -data_conre1) %>%
+  group_by(pretty_name, company_id, has_abep, has_conre, is_in_conre1) %>%
+  summarize(avg = mean(mm3),
+            spm = mean(simple_plus_minus),
+            wpm = mean(weighted_pm),
+            wpm_adj = weighted.mean(weighted_pm, year_weight),
+            n = n()) %>%
+  ungroup()
+
+conre_abep_mean = simple_rating_0 %>%
+  filter(!is_in_conre1 & (has_conre | has_abep)) %>%
+  pull(wpm_adj) %>%
+  mean()
+
+non_conre_abep_mean = simple_rating_0 %>%
+  filter(!is_in_conre1 & (!(has_conre | has_abep))) %>%
+  pull(wpm_adj) %>%
+  mean()
+
+conre1_mean = simple_rating_0 %>%
+  filter(is_in_conre1) %>%
+  pull(wpm_adj) %>%
+  mean()
+
+simple_rating = simple_rating_0 %>%
+  mutate(rev_mean = ifelse(is_in_conre1, conre1_mean, ifelse(has_abep | has_conre, conre_abep_mean, non_conre_abep_mean))) %>%
+  mutate(pred_pm = rev_mean + (wpm - rev_mean) * (n / (n + 15))) %>%
+  mutate(pred_pm_adj = rev_mean + (wpm_adj - rev_mean) * (n / (n + 15))) %>%
+  mutate_if(is.double, round, 3) %>%
+  filter(n >= 5) %>%
+  mutate(quant_bin = .bincode(pred_pm_adj, hist(pred_pm_adj)$breaks)) %>%
+  mutate(grade = recode(quant_bin, `1` = 'A', `2` = 'B+', `3` = 'B', `4` = 'B-', `5` = 'C', `6` = 'D')) 
+
+simple_rating %>%
+  write.csv('output/pollster_rating_final.csv', row.names = F)
+```
+

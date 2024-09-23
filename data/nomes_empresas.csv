@@ -1,0 +1,635 @@
+"company_id","pretty_name"
+REALIDADE,Instituto Realidade
+VOX POPULI,Vox Populi
+GERP,Gerp
+MULTIPLA,Múltipla Pesquisa (PE)
+MULTIDADOS,Multidados
+PROMIDIA,Promídia
+FUTURA,Futura
+RANKING,Ranking Pesquisa
+DGABC,DGABC Pesquisas
+DATAMETRICA,Datamétrica
+ARBEIT,Arbeit Pesquisas
+AGORASEI,Agorasei Pesquisa
+LONDON,London Pesquisas
+AMPLACE,Ampla Pesquisa (CE)
+TDL,TDL Pesquisa
+ANGULO,Ângulo Pesquisas
+SUDOESTE,Jornal Sudoeste (BA)
+TENDENCIAMS,Tendência Pesquisa (MS)
+GAUSS,Instituto Gauss
+ALVO,Alvo Marketing (PA)
+VOGA,Voga Pesquisas
+NILTON,Govnet/Instituto Opinião (SP)
+REAL TIME,Real Time Big Data
+IDEIA,Ideia Big Data
+ESCUTEC,Escutec
+IPECIBOPE,Ipec (antigo Ibope)
+LAURAAMARAL,Instituto Brasileiro de Pesquisa (MS)
+IBRAPE,Ibrape
+"07630546000175",Datafolha
+"81908345000140",Paraná Pesquisas
+"00654576000172",Veritá
+"07317438000147",Doxa
+"40808743000107",Perfil Pesquisas Técnicas (RN)
+"28500023000184",Enquet Pesquisas
+"06270812000133",Instituto de Pesquisa Resultado (MS)
+"05833992000151",Data M
+"06271706000174",Access
+"07596217000155",Fonte Real
+"03303870000128",Exata Op (DF)
+"03568752000141",Empresa de Pesquisas Técnicas
+"03683644000110",Conpar
+"06972255000100",Inerpes
+"15422597000130",Veiga Consultoria e Pesquisa
+"22675543000141",Estimativa
+"39253182000148",GPP
+"84480946000192",D M Duarte
+"10783981000144",Instituto Seta
+"86849395000117",Sensus
+"63581458000100",Exata Pesquisa (MA)
+"00481961000165",Radar Inteligência
+"02503309000120",Comunicare
+"05850850000100",Fortiori
+"03973340000197",Real Dados
+"05023065000176",Gazeta Dados
+"11849437000110",Ipespe
+"09636807000190",Data AZ
+"11267907000138",Regional Mídias
+"15563771000164",Instituto Credibilidade
+"10175063000132",IRG Consultoria
+"04843093000177",Consult Pesquisa (RN)
+"04942645000102",J. J. Coelho
+"19812752000185",Brasil Dados
+"00853528000103",Instituto Methodus
+"02678167000131",Serpes
+"03127619000150",Certus
+ECONOMETRICA,Instituto Econométrica
+"22642565000105",CP2 Pesquisa
+"04967411000101",IBPS
+"07608537000188",Instituto Galaxy
+"25240253000163",Instituto Datailha
+"01403730000104",EPP
+"03011668000122",Mark Instituto de Pesquisa
+"11262311000145",FLS Pesquisa
+"24899123000174",Instituto França
+"19090489000168",MDA
+"36781946000180",IPEMS
+"07278993000107",Instituto Visão (PR)
+"03042195000120",UP Pesquisas
+"04994119000188",Opinião Pesquisas (PB)
+"10735713000157",Index Pesquisas
+"15063483000140",Dataplan
+"02501289000158",Opinião Consultoria (DF)
+"08984712000102",Delta Agência de Pesquisa
+"01096445000180",Grupo M
+"10320257000184",Instituto Amostragem
+"06195852000168",Data Vox
+"08438497000136",BR Marketing
+"33403221000160",Dados Folha (GO)
+"13102873000157",Vale Consultoria
+"04717077000138",Acertar
+"14614894000114",Pontual Pesquisas (AM)
+"10599874000160",Top Midia News
+"09256171000150",IPC
+"19190101000109",Opinar Pesquisas
+"10340949000194",Instituto Opinião (PR)
+"22889875000129",Consulte Inteligência (PI)
+"08057107000188",Instituto Jales
+"03155494000171",MAS Opinião
+"14888537000144",Instituto Vope
+"86951993000100",Jornal Stylo
+"10501739000130",Folha Capital
+"08210871000141",Âncora Pesquisa (Salvador/BA)
+"04061427000150",Folha Regional (Livramento)
+"10335763000147",Práxis Pesquisa
+"11100635000187",MT Dados
+"08980670000123",IDESA
+"09116552000134",Merita Comunicações
+"15484760000199",Coronato Produções
+"11186543000161",Datamax
+"20252668000133",Directa Pesquisa
+"03079221000195",DMP
+"15602816000162",Dataform
+"03830371000199",Imagem Comunicação (Ipatinga)
+"05234994000124",Leia Tudo
+"00905916000190",MBO
+"06183431000117",Interpreta
+"11400305000107",Voice Pesquisas (MT)
+"07268073000108",Sebram
+"10956929000142",Datavox (PB)
+"03688568000135",Tecnodados
+"03846350000161",Alternativa Dados
+"19217115000160",Pro 4 Pesquisa
+"13358105000169",6 Sigma
+"14538940000143",Dados Pesquisa (GO)
+"13456969000113",Evidência Comunicação
+"14266926000138",INOP
+"08691707000101",Compet
+"14717260000197",Prever Pesquisas
+"25999377000127",Foccus
+"09028982000102",Ver Pesquisa
+"96508015000134",Limite Pesquisas
+"10713151000140",Contatus Comunicações
+"04453641000152",Datasonda
+"01217178000151",BMO
+"14205224000144",Nexus
+"08581382000104",Instituto Soberano
+"05260271000108",ITI
+"06859792000130",Pop Pesquisas
+"18237296000124",Incope
+"08716449000162",Memento
+"13098271000173",Polo Pesquisas
+"11047803000118",Sinfor
+"10383383000188",Sensor Pesquisas
+"03896981000195",Cooperfil
+"08624076000108",Plataforma 4
+"09434008000130",Perfil Pesquisas (SP)
+"11716486000185",Captavox
+"14853122000135",Ebrap
+"07871966000143",AP Pesquisas
+"15293191000102",W J Mendes
+"94908951000107",Dirceu F M Gomes
+"10905523000130",Atual Pesquisas
+"13483729000108",Foco Pesquisas (SC)
+"61466926000161",Sudoeste do Estado (SP)
+"09334545000109",Andreia Rafael Publicidade
+"09472061000126",Desttaq
+"09328809000111",Instituto LJM
+"33640228000103",Porto News
+"07385910000189",Centro Oeste Pesquisa
+"13478933000130",Idhata Pesquisa
+"13805175000118",Cerrado Pesquisa
+"07364626000126",Sigma Pesquisas
+"72113046000128",Studio Pesquisas
+"13306192000100",Surgiu Pesquisas
+"09040566000111",Instituto Exatta (PE)
+"81273419000119",Instituto Exatta (PR)
+"02424348000131",Economic Cat
+"08989649000199",Nafonte
+"02348509000155",Mape Produções
+"10962375000277",Telescópio Pesquisa
+"16733806000129",Opinet Pesquisas
+"05099756000153",Strategia
+"06323902000145",Vida Mídia
+"10607783000120",MGS Marketing
+"01408365000112",Dataconsulte
+"09185766000162",Alô Brasil
+"05488856000171",INPE
+"24436087000102",Opiniun Pesquisa
+"17988811000145",Tendência Pesquisa (SC)
+"15836399000112",Axioma
+"14543481000196",Flemming Pesquisas
+"09470150000133",IPAT
+"14275315000156",Erica Regina Análise
+"19697832000137",Tatica
+"07177197000188",R M Mariath
+"25158765000185",Instituto Skala
+"13807655000118",IPMN
+"05590702000196",Accord
+"02170847000140",Data Control
+"15016444000192",Consult Pesquisa (SE)
+"09026259000186",Potencial
+"03817479000141",Única Pesquisa
+"07202498000114",KGM Assessoria
+"62292602000117",Enfoque Assessoria
+"00565157000164",Flexconsult
+"06236709000177",Datalink
+"04894292000104",IP4
+"04896763000113",Giga Consultoria
+"09412335000191",Posicione Pesquisa
+"12503801000159",Gazeta de Alagoas
+"12312607000196",Instituto PHD
+"01286233000165",Instituto Precisão
+"11114729000105",DNA Pesquisa
+"06026300000126",Atlas Assessoria (MS)
+"10572939000184",Instituto Previsão
+"15194353000147",Opinion Maker
+"10673919000108",Brandão e Costa
+"04816658000127",Editora Ana Cássia
+"83203646000101",Mapa Marketing
+"11167150000100",Instituto Mapear
+"03341593000148",Contraponto Comercial
+"06023655000161",Action Marketing
+"13320517000100",Agência Mind
+"11371501000109",Instituto Portinari
+"09339033000135",SDS Serviços
+"11707992000108",Encuesta Pesquisas
+"43455062000109",Toledo e Associados
+"12451031000148",W1 Em Campo
+"02728098000123",Visão Empresarial
+"10818753000162",Constat
+"13004769000120",GQuest
+"03989764000140",Datacenso
+"05123359000170",IPEMPI
+"01503056000121",Datacerto
+"33855115000117",Hoje Comunicações
+"02486450000161",IGUAPE
+"04155770000164",Scenso
+"08543953000108",Aprove
+"06029551000164",BABESP
+"19799000000121",Segmenta Dados
+"00945330000150",Instituto Verus
+"01648876000101",Padrão Pesquisas
+"15400529000170",Ipeto
+"08797064000177",Zaytec Brasil
+"04483758000189",Opinião Brasil (DF)
+"10275628000153",Axiomas Brasil
+"08977267000145",R G C Borges
+"16502103000190",IPESE
+"04756345000120",Lopes e Faleiro
+"09509214000162",CT Assessoria
+"09282211000139",Datavox (AL)
+"04362689000155",ST Pesquisa
+"07661823000107",Brasil Data
+"11077560000160",FSB Pesquisa
+"10307514000148",Item Pesquisas
+"05266474000101",Souza Lopes
+"03781208000183",Perspectiva Pesquisa
+"20018384000187",Instituto Amostra
+"15625058000106",INOPE
+"03989742000180",EPB Consultoria
+"18886742000121",Dado Pesquisa
+"12034597000174",Cruz Consulting
+"10222379000138",Data Consulta
+"22866169000161",Instituto Opine (AL)
+"04857350000120",Opine Pesquisa (PE)
+"14638557000167",Selene Pinheiro da Silva
+"20790165000111",Datasonda
+"02203834000120",EPOM
+"15015873000145",Diagnóstico Pesquisas
+"09597283000175",Jornal Girassol
+"14026979000181",PS Marketing
+"05255333000185",Veritate
+"15592807000138",Projetar Consultoria
+"06196072000132",Henrimond Comunicações
+"24989809000156",Instante Inteligência
+"12032011000132",Ampla Consultoria (BA)
+"11671785000140",Metrópole Pesquisa
+"22526278000130",Objetiva Pesquisa
+"10730923000152",Intake
+"24977635000101",Região Oeste Pesquisas
+"93807485000100",Bureau Pesquisas
+"08733243000140",LGLUZ Consultoria
+"10425289000144",Idealis Pesquisa
+"21649194000120",Painel Brasil
+"24681699000160",Open Data
+"06118009000188",Conpeom
+"22445600000104",Quaest
+"05643737000146",Eleva
+"29550908000150",PoderData
+"17590594000130",Correio do Povo Tocantinense
+"16096182000186",P & A
+"18605544000142",Vertude
+"28780441000172",Instituto Haverroth
+"00189806000170",Lupi Associados
+"23529695000107",Data Basee
+"01269029000136",Boas e Boas
+"09045102000106",Cipec
+"13845495000100",IFT.com
+"22267969000166",Projeta Pesquisa
+"09078962000138",Instituto Signates
+"09219131000139",Método Pesquisa
+"47985577000163",Associação do Comércio e Indústria de Franca
+"24089028000105",F5 Atualiza Dados
+"00794068000270",Virtu Analise
+"20503000000111",Dattamarketing
+"23148627000190",Alô Sergipe
+"18365789000140",Mentor Inteligência
+"05706042000166",Ecos Pesquisa
+"00081933000150",Vetor Assessoria
+"01864538000107",IPEN
+"03764491000135",Perfil Estatística (BA)
+"04209958000148",Badra Comunicação
+"05394365000161",Data Fato
+"05693586000130",Sensatus Pesquisa
+"07217379000135",Vox Data Pesquisa
+"07804258000190",Advise
+"09170122000109",IMAPE
+"09471067000189",Census Pesquisas
+"09610985000141",Agili Pesquisas
+"11134397000120",Jornal O Eco
+"11460605000181",Zaak Consultoria
+"11661310000173",Compasso Consultoria
+"12282147000109",Falpe Pesquisas
+"12843917000137",AGRJPEL
+"14293213000163",Agora Pesquisa (BA)
+"14861123000121",Naipes Marketing
+"15271808000180",Instituto Paranaense de Pesquisas (IPP)
+"15444186000145",Foco Pesquisa (BA)
+"15514430000107",Sensor Pesquisas
+"17159578000198",Instituto Datasensus
+"17442390000152",Simplex Consultoria
+"18372420000164",Interativa Pesquisas
+"19306841000150",Jornal Correio Continental
+"19442446000102",IPEC (MT)
+"19731315000137",Tulipa Pesquisas
+"23340485000168",Vox Opinião Pública (SP)
+"24374946000186",Seculus Consultoria
+"24520398000155",Instituto Intenção
+"24699726000122",Data Alpha Pesquisas
+"26114657000173",Destak Publicidade
+"27747772000148",Contatos Serviços
+"29833202000104",AR7 Pesquisa
+"30788583000128",Disan Empreendimentos
+"30849183000185",Grupo JP
+"32288122000111",Diálogo Consultoria
+"33513194000188",M S Passos Comunicação
+"34607808000153",Instituto Orbis
+"34972238000109",American Analytics
+"34988073000155",Tony Brand Comunicação
+"34996802000115",Instituto Exclusivo
+"35206251000101",RadarNE Pesquisas
+"35572214000117",Equação Pesquisas
+"35575890000144",Instituto Estimativa
+"35751297000101",G3 Soluções
+"36228743000160",IBOP (BA)
+"36348794000126",IPOP (GO)
+"36433619000137",Data Populi
+"36443527000138",Big Vox Pesquisas
+"36443750000185",Exatus Consultoria (RN)
+"36633930000120",V2 Data
+"37025897000118",Jornal O+Positivo
+"37293913000153",Folha de Caiaponia
+"01191743000159",Decisão Pesquisa
+"03348102000190",Brâmane Comunicação
+"04116046000121",Statsol
+"05949626000162",IBEL
+"07277330000178",Ipersena Publicidades
+"07854132000120",Strategya Publicidades
+"08210871000222",Âncora Pesquisa (Irecê/BA)
+"08337378000197",Dominiun Filmes
+"09255395000148",Quallity Serviços Inteligente
+"10175843000182",Instituto Perfil (ES)
+"11604837000166",Global Consulting (GO)
+"12537338000166",Rádio Maracu
+"13006073000132",Sistema Centro Norte
+"13663840000186",Ipopes
+"14209994000165",Mesquita Produções
+"14255299000130",Compope
+"14602960000136",Solução Treinamento
+"15426716000122",ICAPES
+"15692490000101",Datamédia
+"16176992000142",Terra Viva
+"16945085000110",IMMAPEQ
+"19548987000101",Play Comunicação (PR)
+"19738088000171",Plural Assessoria
+"20128172000152",RF Consultoria
+"20592128000107",Malujoa Comunicações
+"20917622000196",Instituto Cristão Brasileiro
+"22946223000189",Attitude Consultoria
+"23723322000164",Morais & Dias
+"24357977000129",Jornal O Coletivo
+"26757039000141",Instituto Lupa
+"31367504000178",Instituto Idealize
+"32626743000168",Instituto EMET
+"33303114000160",ABC Dados
+"33509397000109",Fernandes Consultoria
+"33661095000143",Studio 4
+"34402034000124",EAS Consultoria
+"35703538000147",CEPRAJUR
+"35830530000141",Exata GO
+"36143137000142",Instituto Vision Survey
+"36241367000144",Editora Azul
+"36757932000120",Perspectiva Mercado e Opinião
+"37606745000109",Conectar
+"37609944000170",Instituto Qualitativa
+"66996380000174",Paulista Júnior Consultoria
+"88332580000165",AELBRA
+"19650861000143",NWB Propaganda e Marketing
+"35503371000170",Orca Marketing
+"30638690000170",Data X
+"09087858000100",Opinião Pesquisas (SE)
+"35841563000197",Instituto Data O Dia
+"35904790000114",Ascensão Tecnologia
+"07185753000168",Gráfica e Editora Câmara
+"37887852000152",Datamob
+"38302245000146",Premier Pesquisas
+"31062676000133",CBP Pesquisa e Hotelaria
+"09269398000130",Instituto Peixoto de Alencar
+"35728961000100",INOR
+"20815824000127",Inteligence Serviços
+"14030361000195",Bis Comunicação
+"28504695000168",Brand Consultoria
+"34351657000115",Meta Soluções
+"17121731000198",Instituto Work
+"29648898000190",Destake Pesquisas
+"23960141000151",M. L. Ximenes Consultoria
+"07241393000174",Resultado Pesquisa (MG)
+"14606822000125",Construtora Pinheiros
+"14048123000107",E. Tormes & Cia.
+"35442968000152",Instituto Regnum
+"26269731000120",Instituto GP1
+"19557018000117",Ágora Pesquisa (RJ)
+"03480760000131",ONG Vida Brasil
+"19259002000128",AtlasIntel
+"30226551000139",IAPP
+"36373743000154",Yes Pesquisas
+"26049818000192",Instituto Ceasp
+"29669927000109",RPP Logística
+"36189437000162",FC Pesquisas
+"37658984000102",Publi.QC Pesquisas
+"38346323000104",Eficaz Pesquisas
+"14258291000127",Rede Portalmix
+"26834675000120",LR Consultoria
+"23191866000122",Gradux
+"06288268000157",Instituto Podium
+"12598766000107",Team Pesquisa
+"16704032000108",Torres Pesquisas
+"32844376000179",Avaliar Pesquisa
+"12329007000130",Vitória Pesquisas (RS)
+"34686514000164",CTAS Tecnologia
+"35851783000100",Infornews
+"29280171000101",Kadoshi Pesquisa
+"13159802000190",CEDMP
+"36896958000150",Assertiva Pesquisa
+"28127189000105",Ampla Serviços (MG)
+"17172585000120",Ecodatta
+"10224388000168",Rogério de Mello Bonilha
+"35932087000110",Épico Pesquisas
+"37524035000130",IGAPE
+"59177907000173",APPC
+"24428494000178",IABR
+"04583866000123",Dataqualy
+"13273587000154",Instituto Gasparetto de Pesquisas
+"00095024000171",TC Multimidia
+"38310948000116",Play Consultoria (GO)
+"08713180000160",C. R. Carraro
+"10587479000168",QI Assessoria
+"08097343000128",M. C. F. Chaves
+"22745325000136",Jornal dos Municípios
+"38061259000115",TS2 Soluções
+"30877802000145",Strapasson e Araújo
+"29380522000148",Dimensão Pesquisa
+"27359974000112",Instituto Padrão
+"09263232000107",Grupo Jet
+"32654392000107",Pesquisa Viva Voz
+"34998869000199",Send Pesquisas
+"37603286000100",IPPEC (PR)
+"21216859000102",Civita Inteligência
+"29533384000190",Goiás Pesquisas
+"21365064000166",Equatorial Pesquisa
+"09242998000105",Meta Publicidade e Pesquisa
+"35374772000178",Instituto Indicador
+"12188752000107",Gomes Comunicação
+"03427023000175",Pirâmide Pesquisas
+"31564117000121",Instituto Veredas
+"08894976000167",INPAC
+"11108359000365",GMT Dados
+"32088661000107",Gold Solution
+"20972537000120",Certifica Consultoria
+"28166921000148",Data Qualyt
+"31887889000102",Instituto Premier
+"32664597000165",Exitus Comunicação
+"32245527000172",Colectta Consultoria
+"30256631000137",Porte Edição
+"28053655000147",Apraico Pesquisas
+"69944171000175",Arpel IPEC (PE)
+"09635819000108",Instituto Epicensus
+"24156526000123",Multiplier Assessoria
+"34535741000199",Data Verus Pesquisa
+"17417139000138",AGESP
+"09585604000111",E. M. Produções
+"23297294000160",Instituto Panorama
+"00794068000190",Virtú Análise e Estratégia
+"11572949000182",BZN Pesquisa
+"31044220000140",Ideia Pesquisas
+"29160690000128",Instituto Alvo (SE)
+"61709838000143",IOPPM
+"25291235000100",Imagem Pesquisa (Contagem)
+"06968064000167",P R Barbosa Mídia e Publicidade
+"33059942000102",Editora Zen
+"25348249000113",Alexandre Sócrates Naviskas
+"24700209000126",Datacidad Consultoria
+"04960987000147",Inove Consultoria
+"23963726000125",Criattiva Pesquisa
+"15612495000187",IDEP Brasil
+"15444655000126",Maria Aparecida dos Santos
+"28492188000151",Data Dados
+"07631467000189",Accontece Publicidade
+"15793324000100",Ética Pesquisa
+"08286287000170",Análise Pesquisa
+"36901612000100",Instituto Barcelos
+"26184021000106",RCondoru Pesquisa
+"26807519000170",Foco Consultoria (PI)
+"11954546000106",IPV6 Comunicação
+"28102228000101",RFP Pesquisas
+"06116089000132",Jornal do Grande Rio
+"30669011000120",Mappa Geopolítico
+"19729593000150",Foca Comunicação (RS)
+"16572314000107",Instituto Customers
+"09271490000135",R Mix Eventos
+"29653247000199",Plugin Publicidade
+"02603313000160",Síntese Pesquisa
+"36895820000136",Joch Consultoria
+"17266035000170",A.S. Instituto de Planejamento
+"66990367000108",Instituto Datapress
+"02789166000164",M R Comunicação
+"22438783000122",Instituto Murici
+"19074650000100",Excelência Pesquisa
+"28376850000108",Camminus Marketing
+"13430414000100",Alencar Consultoria
+"10567676000115",EGS Comunicação
+"34683485000187",Grupo Carlos Duarte
+"19123910000190",Prime Collect
+"37552345000168",Axio Inteligência
+"24365906000178",MAP Pesquisa
+"26726991000188",MS Hoje
+"23017790000113",Globo Pesquisa MT
+"36487202000157",Adans Estatística
+"26936465000142",Editora Cidades
+"25166408000169",Resenha +
+"15644394000198",Braslopes Pesquisa
+"37086478000196",Izipag
+"36978391000160",Rondônia Pesquisas
+"01186438000179",Lisboa Pesquisas
+"07263602000180",Logic-Press Brasil
+"22659393000182",Aliança Imóveis
+"12328346000100",Peskar Centro de Pesquisas
+"38653223000120",Brasília Dados
+"05983308000118",Dataeco
+"12330462000156",Instituto Quanty
+"36344581000126",Instituto Inova
+"29188822000120",Agilize Marketing
+"65237786000100",Instituto Dividados
+"15344143000198",Líder Publicidade
+"02702085000185",Instituto Pontuar
+"84782101000151",Instituto Brasil Consultoria
+"34005316000198",ICEBS
+"33131261000108",Hub Atendimento
+"23793036000175",Instituto Plural
+"37258599000178",Promove Comunicação
+"30593823000139",Pro Sete Engenharia
+"09630378000143",Impacto Publicidade
+"10559059000178",All4 Innovation
+"02364672000101",J. S. Paulista
+"39359020000199",Flex Consultoria e Pesquisas
+"25197745000113",Data Índice
+"82883901000133",Vortex Pesquisas
+"37441164000164",Instituto Brasil
+"27892586000100",INPPEL
+"00115187000179",Imagem Pesquisa (PR)
+"28118972000102",Global Consultoria (PR)
+"07331137000178",Visão Pesquisas (SC)
+"22081577000108",PPM Pesquisa
+"10634717000149",Orbital
+"34973045000164",Instituto Vox Dei
+"08811188000160",Instituto Novadata
+"19425348000159",Instituto Oráculo
+"37175609000101",Lugi Comunicação
+"02157152000128",A.R. Akakia
+"33503946000120",Efetiva Pesquisas
+"14489061000179",Data Center Pesquisas
+"36222839000111",J R Pesquisas
+"36419376000182",Instituto Oráculo
+"31431345000123",Organização Paraense de Pesquisa
+"32763235000121",Medeiros Pesquisa
+"26068753000122",SC Treinamentos
+"26058698000190",Ideal Pesquisa
+"25158052000111",Global Service Pesquisas
+"13598475000173",Gustavo Rafael Alves Leão
+"86731528000156",Propalare Serviços
+"22435830000184",Wesearch
+"05140977000128",Instituto Vasconcellos & Souza
+"26673251000120",KM Consultoria
+"27363077000182",121 Labs
+"12912695000329",SBC Dados
+"02070887000110",Simetria
+"72539232000123",Globo Pesquisa (PR)
+"06083776000107",Farias Imóveis e Pesquisas
+"08204684000155",Amaral dos Santos & Pimentel
+"04083399000172",Machado Publicidade
+"10544202000158",Percent Pesquisa
+"29438634000102",Doop Consultoria
+44338241000110,Perfil Pesquisas (RO)
+00444924000187,Centro Brasileiro de Pesquisas de Mercado
+09409427000112,Instituto Opnus
+11740674000149,MPE Consultoria
+42532542000155,Datatempo
+18431026000150,CM7 Comunicação
+16578382000175,Orizzonte Pesquisas
+41296892000105,Instituto Mais (MT)
+49875610000128,Brasmarket
+33375311000194,ICEPAM
+11642489000111,Amazônia TI
+39293002000151,Prefab Future
+35308356000171,Invox Brasil
+42532542000155,Datatempo
+26528386000100,Instituto Opus
+43941908000102,Datavero
+19976273000102,Equilíbrio Brasil
+47408342000109,Vox Pesquisas (SE)
+24302422000180,Opp Pesquisa de Mercado
+03084715000168,A Executiva
+17541189000122,HC7 Consultoria
+44826961000125,Direct Pesquisas (GO)
+12449880000167,Fundepes
+41658934000100,Favela Diz Pesquisas
+37810811000168,Direta Consultoria (Cachoeiro de Itapemirim/ES)
+30719514000162,Result Estratégia (AL)
+28343797000149,Travessia Diagnóstico
+47425567000173,IPPI Pesquisas e Consultoria
+29021286000173,Intelligence Pesquisa e Comunicação
+30296270000152,Direta Propaganda e Eventos (Vitória/ES)
+22974401000185,Imege Pesquisas
+36710707000139,Instituto de Pesquisas Pontual (MS)
